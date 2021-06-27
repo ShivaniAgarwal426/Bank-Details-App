@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Address_Details">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:background="@color/dark_green"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:padding="30dp"
+        android:id="@+id/Address_Details">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/ic_address"/>
+
+        <TextView
+            style="@style/text_white"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Address Details" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Address_Details"
+        android:layout_marginTop="-33dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:layout_marginBottom="20dp"
+            android:elevation="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+                <EditText
+                    android:id="@+id/flat_no"
+                    style="@style/input123"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:drawableLeft="@drawable/ic_building"
+                    android:hint="Flat Number"
+                    android:inputType="number" />
+                <EditText
+                    android:id="@+id/building_name"
+                    android:layout_below="@id/flat_no"
+                    android:layout_marginTop="10dp"
+                    style="@style/input123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:drawableLeft="@drawable/ic_building"
+                    android:hint="Building/ Apartment Name"
+                    android:inputType="text" />
+                <EditText
+                    android:id="@+id/area"
+                    android:layout_below="@id/building_name"
+                    android:layout_marginTop="10dp"
+                    style="@style/input123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:drawableLeft="@drawable/ic_address"
+                    android:hint="Area/ Colony"
+                    android:inputType="text" />
+                <EditText
+                    android:id="@+id/city"
+                    android:layout_below="@id/area"
+                    android:layout_marginTop="10dp"
+                    style="@style/input123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:hint="City"
+                    android:inputType="text" />
+                <EditText
+                    android:id="@+id/state"
+                    android:layout_below="@id/city"
+                    android:layout_marginTop="10dp"
+                    style="@style/input123"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/input_bg"
+                    android:drawableLeft="@drawable/ic_location"
+                    android:hint="State"
+                    android:inputType="text" />
+
+                <Button
+                    android:id="@+id/submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Next"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/light_greem"
+                    android:layout_below="@id/state"
+                    android:layout_marginTop="40dp"
+                    android:textAllCaps="false"
+                    android:textSize="20dp"/>
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</RelativeLayout>
