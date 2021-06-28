@@ -30,20 +30,34 @@ public class Bank_Details extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                retrival
-                String name, getemail, bname;
-                name = getIntent().getStringExtra("Name");
-                getemail = getIntent().getStringExtra("Email");
-                bname = getIntent().getStringExtra("Address");
+//                retrival of op2
+                String output1 = getIntent().getStringExtra("op1");
+                String output2 = getIntent().getStringExtra("op2");
 
+                StringBuilder op3 =new StringBuilder();
+                op3.append("Name of Bank: "+bank_name.getText().toString()+"\n");
+                op3.append("Account Type: "+acc_type.getText().toString()+"\n");
+                op3.append("Account Number: "+acc_no.getText().toString()+"\n");
+                op3.append("IFSC Code: "+ifsc.getText().toString()+"\n");
+                op3.append("Branch: "+branch.getText().toString()+"\n");
 
-
+//                String name, getemail, bname;
+//                name = getIntent().getStringExtra("Name");
+//                getemail = getIntent().getStringExtra("Email");
+//                bname = getIntent().getStringExtra("Address");
+//
+//
+//
                 Intent submit_intent = new Intent(Bank_Details.this,Save_Details.class);
 
-                submit_intent.putExtra("Name", name);
-                submit_intent.putExtra("Email", getemail);
-                submit_intent.putExtra("Address", bname);
-                submit_intent.putExtra("BankName", bank_name.getText().toString());
+                submit_intent.putExtra("op1",output1);
+                submit_intent.putExtra("op2",output2);
+                submit_intent.putExtra("op3",op3.toString());
+//
+//                submit_intent.putExtra("Name", name);
+//                submit_intent.putExtra("Email", getemail);
+//                submit_intent.putExtra("Address", bname);
+//                submit_intent.putExtra("BankName", bank_name.getText().toString());
 
                 Toast.makeText(Bank_Details.this, "Detail saved", Toast.LENGTH_SHORT).show();
                 startActivity(submit_intent);

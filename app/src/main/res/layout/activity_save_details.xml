@@ -43,44 +43,58 @@
             app:cardElevation="8dp"
             android:elevation="20dp">
 <!--            app:cardElevation="20dp"-->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="20dp">
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <!--                1st activity-->
+        <TextView
+            android:text="Personal Details -"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_black_heading"/>
+        <TextView
+            android:id="@+id/op1"
+            android:padding="2dp"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-                <TextView
-                    android:id="@+id/op1"
-                    android:padding="2dp"
-                    android:textSize="18dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/name"
-                    android:padding="2dp"
-                    android:textSize="18dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/getemail"
-                    android:padding="2dp"
-                    android:textSize="18dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/bname"
-                    android:padding="2dp"
-                    android:textSize="18dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <TextView
-                    android:id="@+id/getbank_name"
-                    android:padding="2dp"
-                    android:textSize="18dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-            </LinearLayout>
+        <!--                2nd activity-->
+        <TextView
+            android:text="Address Details -"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_black_heading"/>
+        <TextView
+            android:id="@+id/op2"
+            android:padding="2dp"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
+        <!--                3rd activity-->
+        <TextView
+            android:text="Bank Details -"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/text_black_heading"/>
+
+
+        <TextView
+            android:id="@+id/op3"
+            android:padding="2dp"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
 
 
 

@@ -24,7 +24,7 @@ public class Personal_Details extends AppCompatActivity {
     RadioGroup gender;
     RadioButton male, female;
     String name, getemail;
-//    TextView op1;  // must be local stringbuilder variable
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +40,7 @@ public class Personal_Details extends AppCompatActivity {
         getemail = email.getText().toString();   //        ................................
 
         contact = findViewById(R.id.contact);
+        gender = findViewById(R.id.gender);
         age= findViewById(R.id.age);
         nation = findViewById(R.id.nation);
 
@@ -48,32 +49,30 @@ public class Personal_Details extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-//                StringBuilder op1 = new StringBuilder();
-////                op1.setText("");
-//                op1.append("Name: "+firstname.getText().toString()+" "+lastname.getText().toString()+"\n");
-//                op1.append("Email; "+email.getText().toString()+"\n");
-//                op1.append("Contact: "+contact.getText().toString()+"\n");
-//                int gender_id = gender.getCheckedRadioButtonId();
-//                if (gender_id == R.id.male){
-//                    op1.append("Gender: Male\n");
-//                }
-//                else {
-//                    op1.append("Gender: Female\n");
-//                }
-//                op1.append("Age: "+age.getText().toString()+"\n");
-//                op1.append("Nation: "+nation.getText().toString()+"\n");
-
-
-                
+                StringBuilder op1 = new StringBuilder();
+//                op1.setText("");
+                op1.append("Name: "+firstname.getText().toString()+" "+lastname.getText().toString()+"\n");
+                op1.append("Email: "+email.getText().toString()+"\n");
+                op1.append("Contact: "+contact.getText().toString()+"\n");
+                int gender_id = gender.getCheckedRadioButtonId();
+                if (gender_id == R.id.male){
+                    op1.append("Gender: Male\n");
+                }
+                else {
+                    op1.append("Gender: Female\n");
+                }
+                op1.append("Age: "+age.getText().toString()+"\n");
+                op1.append("Nation: "+nation.getText().toString()+"\n");
 
                 Intent submit_intent = new Intent(Personal_Details.this,Address_Details.class);
 
-//                submit_intent.putExtra("output1", op1.toString());
+                submit_intent.putExtra("op1", op1.toString());
+                Toast.makeText(Personal_Details.this,"Details Saved",Toast.LENGTH_SHORT).show();
 
-                submit_intent.putExtra("Name", firstname.getText().toString() +" "+lastname.getText().toString());
-                submit_intent.putExtra("Email", email.getText().toString());
-                Toast.makeText(getApplicationContext(), name , Toast.LENGTH_SHORT).show();   // name+" "+getemail
-                Toast.makeText(getApplicationContext(), getemail , Toast.LENGTH_SHORT).show();
+//                submit_intent.putExtra("Name", firstname.getText().toString() +" "+lastname.getText().toString());
+//                submit_intent.putExtra("Email", email.getText().toString());
+//                Toast.makeText(getApplicationContext(), name , Toast.LENGTH_SHORT).show();   // name+" "+getemail
+//                Toast.makeText(getApplicationContext(), getemail , Toast.LENGTH_SHORT).show();
                 
                 startActivity(submit_intent);
 //                finish();
