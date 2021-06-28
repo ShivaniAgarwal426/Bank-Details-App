@@ -96,10 +96,6 @@
 
 </androidx.core.widget.NestedScrollView>
 
-
-
-
-
         </androidx.cardview.widget.CardView>
     </RelativeLayout>
 </RelativeLayout>
